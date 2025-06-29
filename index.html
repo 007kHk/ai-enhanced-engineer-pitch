@@ -1,470 +1,433 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.3">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #4689cc; -webkit-text-stroke: #4689cc}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #8cd3fe; -webkit-text-stroke: #8cd3fe}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #c27e65; -webkit-text-stroke: #c27e65}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #cacaca; -webkit-text-stroke: #cacaca}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6d7378; -webkit-text-stroke: #6d7378}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #a7c598; -webkit-text-stroke: #a7c598}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #cacaca; -webkit-text-stroke: #cacaca; min-height: 16.0px}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #71c083; -webkit-text-stroke: #71c083}
-    span.s1 {font-kerning: none; background-color: #171818}
-    span.s2 {font-kerning: none; color: #8cd3fe; background-color: #171818; -webkit-text-stroke: 0px #8cd3fe}
-    span.s3 {font-kerning: none; color: #6d6d6d; background-color: #171818; -webkit-text-stroke: 0px #6d6d6d}
-    span.s4 {font-kerning: none; color: #cacaca; background-color: #171818; -webkit-text-stroke: 0px #cacaca}
-    span.s5 {font-kerning: none; color: #c27e65; background-color: #171818; -webkit-text-stroke: 0px #c27e65}
-    span.s6 {font-kerning: none; color: #4689cc; background-color: #171818; -webkit-text-stroke: 0px #4689cc}
-    span.s7 {font-kerning: none; color: #6d7378; background-color: #171818; -webkit-text-stroke: 0px #6d7378}
-    span.s8 {font-kerning: none; color: #d4d4d4; background-color: #171818; -webkit-text-stroke: 0px #d4d4d4}
-    span.s9 {font-kerning: none; color: #71c083; background-color: #171818; -webkit-text-stroke: 0px #71c083}
-    span.s10 {font-kerning: none; color: #a7c598; background-color: #171818; -webkit-text-stroke: 0px #a7c598}
-    span.s11 {font-kerning: none}
-    span.s12 {font-kerning: none; color: #b76ff7; background-color: #171818; -webkit-text-stroke: 0px #b76ff7}
-    span.s13 {font-kerning: none; color: #f67c30; background-color: #171818; -webkit-text-stroke: 0px #f67c30}
-    span.s14 {font-kerning: none; color: #36c0a0; background-color: #171818; -webkit-text-stroke: 0px #36c0a0}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Enhanced Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!--
+    Chosen Palette: Warm Neutrals with Tech Blue Accent
+    Application Structure Plan: The SPA is structured as a narrative journey, guiding the user from a high-level introduction to the specifics of the role. It starts with a "Hero" section to grab attention, followed by thematic sections for "Why It Matters," "What We Do," "The Human Advantage," and "Value Proposition." This logical flow mirrors a persuasive argument, making it easy for users (like hiring managers or clients) to understand the role's value. Navigation is handled by a sticky header, allowing quick access to any section. Interactive elements like a development impact chart and clickable skill cards are used to engage the user and make the data more digestible than static bullet points. This structure prioritizes clarity and engagement over a simple slide-for-slide recreation.
+    Visualization & Content Choices:
+    - Why This Role Matters (Report Info) -> Goal: Inform & establish context -> Viz/Method: Three iconic cards with hover effects -> Interaction: Hover to reveal more text -> Justification: Breaks down the core argument into digestible, visually appealing chunks.
+    - What We Do Differently (Report Info) -> Goal: Organize & detail tasks -> Viz/Method: Interactive tabbed interface -> Interaction: Click tabs to reveal specific task descriptions -> Justification: Organizes distinct capabilities cleanly without overwhelming the user, encouraging active exploration.
+    - The Human Advantage (Report Info) -> Goal: Compare AI vs. Human skills -> Viz/Method: Two-column layout with contrasting cards -> Interaction: Subtle hover animations on cards -> Justification: Clearly contrasts the AI's capabilities with the irreplaceable human skills, reinforcing the "augmentation" message.
+    - Value We Bring (Report Info) -> Goal: Showcase quantitative data -> Viz/Method: Dynamic bar chart (Chart.js) and key metric cards -> Interaction: Chart animates on load; cards have a subtle glow -> Justification: A bar chart is perfect for comparing metrics like development speed, while cards highlight key stats for quick comprehension. This makes the "30-50% faster" claim tangible.
+    CONFIRMATION: NO SVG graphics used. NO Mermaid JS used.
+    -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F7F4; /* Warm Neutral Background */
+            color: #2c3e50;
+        }
+        .bg-tech-primary { background-color: #3B82F6; } /* Tech Blue */
+        .text-tech-primary { color: #3B82F6; }
+        .bg-warm-neutral { background-color: #F8F7F4; }
+        .bg-warm-secondary { background-color: #EAE8E2; }
+        .text-warm-dark { color: #4A4A4A; }
+        .text-warm-medium { color: #706f6c; }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 40vh;
+            max-height: 400px;
+        }
+        .nav-link {
+            transition: color 0.3s ease, border-bottom-color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #3B82F6;
+        }
+        .nav-link.active {
+            color: #3B82F6;
+            border-bottom: 2px solid #3B82F6;
+        }
+        .tab-btn.active {
+            background-color: #3B82F6;
+            color: white;
+        }
+        .tab-btn {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .section-fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .section-fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
-<body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE</span><span class="s2"> html</span><span class="s1">&gt;</span></p>
-<p class="p1"><span class="s3">&lt;</span><span class="s1">html</span><span class="s4"> </span><span class="s2">lang</span><span class="s3">=</span><span class="s5">"en"</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s3">&lt;</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s1">charset</span><span class="s3">=</span><span class="s5">"UTF-8"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s2">name</span><span class="s3">=</span><span class="s1">"viewport"</span><span class="s4"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"width=device-width, initial-scale=1.0"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">title</span><span class="s3">&gt;</span><span class="s1">AI-Enhanced Software Engineer</span><span class="s3">&lt;/</span><span class="s6">title</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">script</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://cdn.tailwindcss.com"</span><span class="s3">&gt;&lt;/</span><span class="s6">script</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">script</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://cdn.jsdelivr.net/npm/chart.js"</span><span class="s3">&gt;&lt;/</span><span class="s6">script</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">link</span><span class="s4"> </span><span class="s2">rel</span><span class="s3">=</span><span class="s1">"preconnect"</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://fonts.googleapis.com"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">link</span><span class="s4"> </span><span class="s2">rel</span><span class="s3">=</span><span class="s1">"preconnect"</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://fonts.gstatic.com"</span><span class="s4"> </span><span class="s2">crossorigin</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">link</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"</span><span class="s4"> </span><span class="s2">rel</span><span class="s3">=</span><span class="s1">"stylesheet"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s7">&lt;!--</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>Chosen Palette: Warm Neutrals with Tech Blue Accent</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>Application Structure Plan: The SPA is structured as a narrative journey, guiding the user from a high-level introduction to the specifics of the role. It starts with a "Hero" section to grab attention, followed by thematic sections for "Why It Matters," "What We Do," "The Human Advantage," and "Value Proposition." This logical flow mirrors a persuasive argument, making it easy for users (like hiring managers or clients) to understand the role's value. Navigation is handled by a sticky header, allowing quick access to any section. Interactive elements like a development impact chart and clickable skill cards are used to engage the user and make the data more digestible than static bullet points. This structure prioritizes clarity and engagement over a simple slide-for-slide recreation.</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>Visualization &amp; Content Choices:</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>- Why This Role Matters (Report Info) -&gt; Goal: Inform &amp; establish context -&gt; Viz/Method: Three iconic cards with hover effects -&gt; Interaction: Hover to reveal more text -&gt; Justification: Breaks down the core argument into digestible, visually appealing chunks.</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>- What We Do Differently (Report Info) -&gt; Goal: Organize &amp; detail tasks -&gt; Viz/Method: Interactive tabbed interface -&gt; Interaction: Click tabs to reveal specific task descriptions -&gt; Justification: Organizes distinct capabilities cleanly without overwhelming the user, encouraging active exploration.</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>- The Human Advantage (Report Info) -&gt; Goal: Compare AI vs. Human skills -&gt; Viz/Method: Two-column layout with contrasting cards -&gt; Interaction: Subtle hover animations on cards -&gt; Justification: Clearly contrasts the AI's capabilities with the irreplaceable human skills, reinforcing the "augmentation" message.</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>- Value We Bring (Report Info) -&gt; Goal: Showcase quantitative data -&gt; Viz/Method: Dynamic bar chart (Chart.js) and key metric cards -&gt; Interaction: Chart animates on load; cards have a subtle glow -&gt; Justification: A bar chart is perfect for comparing metrics like development speed, while cards highlight key stats for quick comprehension. This makes the "30-50% faster" claim tangible.</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>CONFIRMATION: NO SVG graphics used. NO Mermaid JS used.</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span>--&gt;</span></p>
-<p class="p1"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">body</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-family:</span><span class="s1"> </span><span class="s9">'Inter'</span><span class="s8">,</span><span class="s1"> </span><span class="s5">sans-serif</span><span class="s8">;</span></p>
-<p class="p5"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">background-color:</span><span class="s4"> #F8F7F4</span><span class="s8">;</span><span class="s4"> </span><span class="s1">/* Warm Neutral Background */</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color:</span><span class="s1"> #2c3e50</span><span class="s8">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">.bg-tech-primary</span><span class="s1"> </span><span class="s8">{</span><span class="s1"> </span><span class="s2">background-color:</span><span class="s1"> #3B82F6</span><span class="s8">;</span><span class="s1"> </span><span class="s8">}</span><span class="s1"> </span><span class="s7">/* Tech Blue */</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">.text-tech-primary</span><span class="s1"> </span><span class="s8">{</span><span class="s1"> </span><span class="s2">color:</span><span class="s1"> #3B82F6</span><span class="s8">;</span><span class="s1"> </span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">.bg-warm-neutral</span><span class="s1"> </span><span class="s8">{</span><span class="s1"> </span><span class="s2">background-color:</span><span class="s1"> #F8F7F4</span><span class="s8">;</span><span class="s1"> </span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">.bg-warm-secondary</span><span class="s1"> </span><span class="s8">{</span><span class="s1"> </span><span class="s2">background-color:</span><span class="s1"> #EAE8E2</span><span class="s8">;</span><span class="s1"> </span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">.text-warm-dark</span><span class="s1"> </span><span class="s8">{</span><span class="s1"> </span><span class="s2">color:</span><span class="s1"> #4A4A4A</span><span class="s8">;</span><span class="s1"> </span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">.text-warm-medium</span><span class="s1"> </span><span class="s8">{</span><span class="s1"> </span><span class="s2">color:</span><span class="s1"> #706f6c</span><span class="s8">;</span><span class="s1"> </span><span class="s8">}</span></p>
-<p class="p1"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.chart-container</span><span class="s4"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">position:</span><span class="s1"> </span><span class="s5">relative</span><span class="s8">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">width:</span><span class="s1"> </span><span class="s10">100%</span><span class="s8">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">max-width:</span><span class="s1"> </span><span class="s10">700px</span><span class="s8">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">margin-left:</span><span class="s1"> </span><span class="s5">auto</span><span class="s8">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">margin-right:</span><span class="s1"> </span><span class="s5">auto</span><span class="s8">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">height:</span><span class="s1"> </span><span class="s10">40vh</span><span class="s8">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">max-height:</span><span class="s1"> </span><span class="s10">400px</span><span class="s8">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">.nav-link</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">transition:</span><span class="s4"> </span><span class="s1">color</span><span class="s4"> </span><span class="s10">0.3s</span><span class="s4"> </span><span class="s1">ease</span><span class="s8">,</span><span class="s4"> </span><span class="s1">border-bottom-color</span><span class="s4"> </span><span class="s10">0.3s</span><span class="s4"> </span><span class="s1">ease</span><span class="s8">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s8">}</span></p>
-<p class="p1"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.nav-link:hover</span><span class="s4"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color:</span><span class="s1"> #3B82F6</span><span class="s8">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s8">}</span></p>
-<p class="p1"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.nav-link.active</span><span class="s4"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color:</span><span class="s1"> #3B82F6</span><span class="s8">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-bottom:</span><span class="s1"> </span><span class="s10">2px</span><span class="s1"> </span><span class="s5">solid</span><span class="s1"> #3B82F6</span><span class="s8">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s8">}</span></p>
-<p class="p1"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.tab-btn.active</span><span class="s4"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background-color:</span><span class="s1"> #3B82F6</span><span class="s8">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color:</span><span class="s1"> </span><span class="s5">white</span><span class="s8">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">.tab-btn</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">transition:</span><span class="s4"> </span><span class="s1">background-color</span><span class="s4"> </span><span class="s10">0.3s</span><span class="s4"> </span><span class="s1">ease</span><span class="s8">,</span><span class="s4"> </span><span class="s1">color</span><span class="s4"> </span><span class="s10">0.3s</span><span class="s4"> </span><span class="s1">ease</span><span class="s8">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">.card</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">transition:</span><span class="s4"> </span><span class="s1">transform</span><span class="s4"> </span><span class="s10">0.3s</span><span class="s4"> </span><span class="s1">ease</span><span class="s8">,</span><span class="s4"> </span><span class="s1">box-shadow</span><span class="s4"> </span><span class="s10">0.3s</span><span class="s4"> </span><span class="s1">ease</span><span class="s8">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s8">}</span></p>
-<p class="p1"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.card:hover</span><span class="s4"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">transform:</span><span class="s1"> </span><span class="s5">translateY(</span><span class="s10">-5px</span><span class="s5">)</span><span class="s8">;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">box-shadow:</span><span class="s4"> </span><span class="s1">0</span><span class="s4"> </span><span class="s1">10px</span><span class="s4"> </span><span class="s1">15px</span><span class="s4"> </span><span class="s1">-3px</span><span class="s4"> </span><span class="s5">rgba(</span><span class="s1">0</span><span class="s8">,</span><span class="s4"> </span><span class="s1">0</span><span class="s8">,</span><span class="s4"> </span><span class="s1">0</span><span class="s8">,</span><span class="s4"> </span><span class="s1">0.1</span><span class="s5">)</span><span class="s8">,</span><span class="s4"> </span><span class="s1">0</span><span class="s4"> </span><span class="s1">4px</span><span class="s4"> </span><span class="s1">6px</span><span class="s4"> </span><span class="s1">-2px</span><span class="s4"> </span><span class="s5">rgba(</span><span class="s1">0</span><span class="s8">,</span><span class="s4"> </span><span class="s1">0</span><span class="s8">,</span><span class="s4"> </span><span class="s1">0</span><span class="s8">,</span><span class="s4"> </span><span class="s1">0.05</span><span class="s5">)</span><span class="s8">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s8">}</span></p>
-<p class="p1"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.section-fade-in</span><span class="s4"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">opacity:</span><span class="s1"> </span><span class="s10">0</span><span class="s8">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">transform:</span><span class="s1"> </span><span class="s5">translateY(</span><span class="s10">20px</span><span class="s5">)</span><span class="s8">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">transition:</span><span class="s4"> </span><span class="s1">opacity</span><span class="s4"> </span><span class="s10">0.6s</span><span class="s4"> </span><span class="s1">ease-out</span><span class="s8">,</span><span class="s4"> </span><span class="s1">transform</span><span class="s4"> </span><span class="s10">0.6s</span><span class="s4"> </span><span class="s1">ease-out</span><span class="s8">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s8">}</span></p>
-<p class="p1"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.section-fade-in.visible</span><span class="s4"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">opacity:</span><span class="s1"> </span><span class="s10">1</span><span class="s8">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">transform:</span><span class="s1"> </span><span class="s5">translateY(</span><span class="s10">0</span><span class="s5">)</span><span class="s8">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s8">}</span></p>
-<p class="p1"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s3">&lt;/</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s3">&lt;</span><span class="s6">body</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"antialiased"</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s11"></span><br></p>
-<p class="p5"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Header &amp; Navigation --&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">header</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"header"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-warm-neutral/80 backdrop-blur-sm sticky top-0 z-50 transition-all duration-300 shadow-sm"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"container mx-auto px-6 py-4 flex justify-between items-center"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex items-center"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-2xl font-extrabold text-tech-primary"</span><span class="s3">&gt;</span><span class="s4">🔧</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">h1</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl font-bold ml-2 text-warm-dark"</span><span class="s3">&gt;</span><span class="s4">AI-Enhanced Engineer</span><span class="s3">&lt;/</span><span class="s6">h1</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">nav</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hidden md:flex space-x-8"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#why-matters"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"nav-link text-warm-medium font-semibold pb-1"</span><span class="s3">&gt;</span><span class="s4">Why It Matters</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#what-we-do"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"nav-link text-warm-medium font-semibold pb-1"</span><span class="s3">&gt;</span><span class="s4">What We Do</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#human-advantage"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"nav-link text-warm-medium font-semibold pb-1"</span><span class="s3">&gt;</span><span class="s4">Human Advantage</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#value"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"nav-link text-warm-medium font-semibold pb-1"</span><span class="s3">&gt;</span><span class="s4">Value</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#commitment"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"nav-link text-warm-medium font-semibold pb-1"</span><span class="s3">&gt;</span><span class="s4">Commitment</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">nav</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"mobile-menu-button"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"md:hidden text-warm-dark"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">xmlns</span><span class="s3">=</span><span class="s1">"http://www.w3.org/2000/svg"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"h-6 w-6"</span><span class="s4"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"none"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s4"> </span><span class="s2">stroke</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s1">stroke-linecap</span><span class="s3">=</span><span class="s5">"round"</span><span class="s4"> </span><span class="s1">stroke-linejoin</span><span class="s3">=</span><span class="s5">"round"</span><span class="s4"> </span><span class="s1">stroke-width</span><span class="s3">=</span><span class="s5">"2"</span><span class="s4"> </span><span class="s1">d</span><span class="s3">=</span><span class="s5">"M4 6h16M4 12h16m-7 6h7"</span><span class="s4"> </span><span class="s3">/&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- Mobile Menu --&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"mobile-menu"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hidden md:hidden"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#why-matters"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"block text-center py-2 px-4 text-sm text-warm-dark hover:bg-warm-secondary"</span><span class="s3">&gt;</span><span class="s4">Why It Matters</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#what-we-do"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"block text-center py-2 px-4 text-sm text-warm-dark hover:bg-warm-secondary"</span><span class="s3">&gt;</span><span class="s4">What We Do</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#human-advantage"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"block text-center py-2 px-4 text-sm text-warm-dark hover:bg-warm-secondary"</span><span class="s3">&gt;</span><span class="s4">Human Advantage</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#value"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"block text-center py-2 px-4 text-sm text-warm-dark hover:bg-warm-secondary"</span><span class="s3">&gt;</span><span class="s4">Value</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#commitment"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"block text-center py-2 px-4 text-sm text-warm-dark hover:bg-warm-secondary"</span><span class="s3">&gt;</span><span class="s4">Commitment</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">header</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s11"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">main</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- Hero Section --&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"hero"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-20 md:py-32"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"container mx-auto text-center px-6"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">h1</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-4xl md:text-6xl font-extrabold text-warm-dark leading-tight"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>AI-Enhanced Software Engineers</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">h1</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"mt-4 text-lg md:text-xl text-warm-medium max-w-3xl mx-auto"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>Designing smarter systems by combining the power of artificial intelligence with the irreplaceable value of human creativity and strategic insight.</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">a</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"#why-matters"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"mt-8 inline-block bg-tech-primary text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-300"</span><span class="s3">&gt;</span><span class="s4">Discover Our Impact</span><span class="s3">&lt;/</span><span class="s6">a</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">section</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s11"></span><br></p>
-<p class="p5"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- Why This Role Matters Section --&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"why-matters"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-20 bg-warm-secondary section-fade-in"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"container mx-auto px-6"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-3xl md:text-4xl font-bold text-center text-warm-dark"</span><span class="s3">&gt;</span><span class="s4">🌍 AI is Reshaping Software Development.</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-center text-lg text-warm-medium mt-4 max-w-2xl mx-auto"</span><span class="s3">&gt;</span><span class="s1">We aren't just adapting to this change; we are leading it. This role is crucial for any organization looking to thrive in the modern tech landscape.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"mt-12 grid md:grid-cols-3 gap-8"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"card bg-white p-8 rounded-xl shadow-md text-center"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-4xl mb-4"</span><span class="s3">&gt;</span><span class="s1">⚡</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xl font-bold text-warm-dark mb-2"</span><span class="s3">&gt;</span><span class="s1">Pace of Technology</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-warm-medium"</span><span class="s3">&gt;</span><span class="s1">Tech is moving faster than ever. AI isn't just an add-on; it's deeply embedded in how we build, test, and deploy modern software solutions.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"card bg-white p-8 rounded-xl shadow-md text-center"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-4xl mb-4"</span><span class="s3">&gt;</span><span class="s1">🧠</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xl font-bold text-warm-dark mb-2"</span><span class="s3">&gt;</span><span class="s1">The Innovation Imperative</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-warm-medium"</span><span class="s3">&gt;</span><span class="s1">Companies need engineers who don't just write code, but who can adapt, innovate, and leverage the most advanced tools to solve complex problems.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"card bg-white p-8 rounded-xl shadow-md text-center"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-4xl mb-4"</span><span class="s3">&gt;</span><span class="s1">🤝</span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-xl font-bold text-warm-dark mb-2"</span><span class="s3">&gt;</span><span class="s1">Strategic Partnership</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-warm-medium"</span><span class="s3">&gt;</span><span class="s1">This role represents the future of engineering—a strategic blend of AI-native tools and sophisticated, human-led strategic thinking.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">section</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s11"></span><br></p>
-<p class="p5"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- What We Do Differently Section --&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"what-we-do"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-20 section-fade-in"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"container mx-auto px-6"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-3xl md:text-4xl font-bold text-center text-warm-dark"</span><span class="s3">&gt;</span><span class="s4">🛠️ Not Just Coding—Co-creating with AI</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-center text-lg text-warm-medium mt-4 max-w-3xl mx-auto"</span><span class="s3">&gt;</span><span class="s1">Our workflow integrates intelligent tools at every stage of the development lifecycle. This allows us to build better software, faster, and with a focus on what truly matters: innovation and quality.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"mt-12 max-w-4xl mx-auto"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex justify-center mb-8 bg-warm-secondary rounded-lg p-1 space-x-1"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"tab-btn flex-1 py-2 px-4 rounded-md font-semibold active"</span><span class="s4"> </span><span class="s2">data-tab</span><span class="s3">=</span><span class="s1">"coding"</span><span class="s3">&gt;</span><span class="s4">Code Generation</span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"tab-btn flex-1 py-2 px-4 rounded-md font-semibold"</span><span class="s4"> </span><span class="s2">data-tab</span><span class="s3">=</span><span class="s1">"testing"</span><span class="s3">&gt;</span><span class="s4">Testing &amp; QA</span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">button</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"tab-btn flex-1 py-2 px-4 rounded-md font-semibold"</span><span class="s4"> </span><span class="s2">data-tab</span><span class="s3">=</span><span class="s1">"features"</span><span class="s3">&gt;</span><span class="s4">Smart Features</span><span class="s3">&lt;/</span><span class="s6">button</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"tab-content"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white p-8 rounded-xl shadow-lg"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"tab-pane active"</span><span class="s1"> </span><span class="s2">id</span><span class="s3">=</span><span class="s5">"coding"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-2xl font-bold text-tech-primary mb-3"</span><span class="s3">&gt;</span><span class="s1">AI-Accelerated Coding</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-warm-medium"</span><span class="s3">&gt;</span><span class="s1">We leverage state-of-the-art tools like </span><span class="s3">&lt;</span><span class="s6">strong</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-warm-dark"</span><span class="s3">&gt;</span><span class="s1">GitHub Copilot</span><span class="s3">&lt;/</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1"> and </span><span class="s3">&lt;</span><span class="s6">strong</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-warm-dark"</span><span class="s3">&gt;</span><span class="s1">ChatGPT-4o</span><span class="s3">&lt;/</span><span class="s6">strong</span><span class="s3">&gt;</span><span class="s1"> to generate boilerplate code, suggest complex algorithms, and refactor existing code for clarity and performance. This isn't just about auto-complete; it's about having an intelligent partner that understands context, allowing us to focus on high-level architecture and logic.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"tab-pane hidden"</span><span class="s1"> </span><span class="s2">id</span><span class="s3">=</span><span class="s5">"testing"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-2xl font-bold text-tech-primary mb-3"</span><span class="s3">&gt;</span><span class="s1">Automated Testing &amp; Diagnostics</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-warm-medium"</span><span class="s3">&gt;</span><span class="s1">We use AI to automate the creation of unit tests, integration tests, and even to identify potential bugs before they enter production. With AI-powered diagnostics, we can analyze code quality, find performance bottlenecks, and ensure our CI/CD pipelines are robust and reliable, significantly reducing technical debt accumulation.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"tab-pane hidden"</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"features"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-2xl font-bold text-tech-primary mb-3"</span><span class="s3">&gt;</span><span class="s1">Building with Intelligence</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-warm-medium"</span><span class="s3">&gt;</span><span class="s1">Our approach goes beyond just building applications. We integrate intelligent features directly into our products using the latest Large Language Models (LLMs) and API integrations. This means creating smarter software that can understand natural language, personalize user experiences, and provide predictive insights, adding a layer of value that standard applications lack.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">section</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s11"></span><br></p>
-<p class="p5"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- The Human Advantage Section --&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"human-advantage"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-20 bg-warm-secondary section-fade-in"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"container mx-auto px-6"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                 </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-3xl md:text-4xl font-bold text-center text-warm-dark"</span><span class="s3">&gt;</span><span class="s4">💡 We Bring What AI Can’t: Human Insight</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                 </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-center text-lg text-warm-medium mt-4 max-w-3xl mx-auto"</span><span class="s3">&gt;</span><span class="s1">AI is a powerful tool, but our value lies in the skills that no algorithm can replicate. We guide, strategize, and ensure technology serves human goals.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-8"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"card bg-white p-6 rounded-xl shadow"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"font-bold text-lg text-tech-primary mb-2"</span><span class="s3">&gt;</span><span class="s4">Ethical Thinking</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-warm-medium text-sm"</span><span class="s3">&gt;</span><span class="s1">Ensuring fairness, transparency, and responsibility in every AI system we build, mitigating bias and prioritizing user trust.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"card bg-white p-6 rounded-xl shadow"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"font-bold text-lg text-tech-primary mb-2"</span><span class="s3">&gt;</span><span class="s4">Collaboration</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-warm-medium text-sm"</span><span class="s3">&gt;</span><span class="s1">Working with cross-functional teams to translate complex business needs into elegant technical solutions that people love to use.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                     </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"card bg-white p-6 rounded-xl shadow"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"font-bold text-lg text-tech-primary mb-2"</span><span class="s3">&gt;</span><span class="s1">Creative Problem-Solving</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-warm-medium text-sm"</span><span class="s3">&gt;</span><span class="s1">Tackling ambiguous problems and debugging complex issues where context, intuition, and innovative thinking are paramount.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"card bg-white p-6 rounded-xl shadow"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"font-bold text-lg text-tech-primary mb-2"</span><span class="s3">&gt;</span><span class="s4">Adaptability</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-warm-medium text-sm"</span><span class="s3">&gt;</span><span class="s1">Committing to continuous learning in a rapidly changing field, mastering new tools and paradigms to always stay at the forefront of technology.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">section</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s11"></span><br></p>
-<p class="p5"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- Value Proposition Section --&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"value"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-20 section-fade-in"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"container mx-auto px-6"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-3xl md:text-4xl font-bold text-center text-warm-dark"</span><span class="s3">&gt;</span><span class="s4">🚀 Faster. Smarter. Stronger Tech Teams.</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-center text-lg text-warm-medium mt-4 max-w-3xl mx-auto"</span><span class="s3">&gt;</span><span class="s1">Our AI-augmented approach isn't just a new process; it delivers measurable results that directly impact the bottom line and the pace of innovation.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"mt-16 grid lg:grid-cols-5 gap-8 items-center"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"lg:col-span-2 space-y-6"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white p-6 rounded-xl shadow-lg border-l-4 border-tech-primary"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-4xl font-extrabold text-tech-primary"</span><span class="s3">&gt;</span><span class="s4">30-50%</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"font-semibold text-warm-dark"</span><span class="s3">&gt;</span><span class="s1">Faster Development Cycles</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white p-6 rounded-xl shadow-lg border-l-4 border-yellow-400"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                             </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-4xl font-extrabold text-yellow-500"</span><span class="s3">&gt;</span><span class="s4">2x</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"font-semibold text-warm-dark"</span><span class="s3">&gt;</span><span class="s1">More Innovative Features</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                         </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-white p-6 rounded-xl shadow-lg border-l-4 border-green-400"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                             </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-4xl font-extrabold text-green-500"</span><span class="s3">&gt;</span><span class="s4">↑</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"font-semibold text-warm-dark"</span><span class="s3">&gt;</span><span class="s1">Higher Code Quality</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"lg:col-span-3"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"chart-container"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s6">canvas</span><span class="s1"> </span><span class="s2">id</span><span class="s3">=</span><span class="s5">"devImpactChart"</span><span class="s3">&gt;&lt;/</span><span class="s6">canvas</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">section</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s11"></span><br></p>
-<p class="p5"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- Commitment Section --&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">section</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"commitment"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"py-20 bg-warm-secondary section-fade-in"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"container mx-auto px-6 text-center"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">h2</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-3xl md:text-4xl font-bold text-warm-dark"</span><span class="s3">&gt;</span><span class="s1">🔮 We Don't Just Use AI. We Evolve With It.</span><span class="s3">&lt;/</span><span class="s6">h2</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"mt-8 max-w-3xl mx-auto"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">blockquote</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl md:text-2xl font-semibold italic text-warm-medium border-l-4 border-tech-primary pl-6"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>“By integrating AI into our workflows with strategy and care, we’re not just staying relevant—we’re shaping what’s next.”</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">blockquote</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">section</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s6">main</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s11"></span><br></p>
-<p class="p5"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Footer --&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">footer</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-warm-dark text-warm-secondary"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"container mx-auto py-8 px-6 text-center"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-2xl font-bold"</span><span class="s3">&gt;</span><span class="s1">👏 Let's Build The Future—Together.</span><span class="s3">&lt;/</span><span class="s6">h3</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"mt-4 text-sm"</span><span class="s3">&gt;</span><span class="s1">[Your Team Name] | [Optional contact or portfolio links]</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">footer</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s11"></span><br></p>
-<p class="p1"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>document</span><span class="s8">.</span><span class="s1">addEventListener</span><span class="s8">(</span><span class="s9">'DOMContentLoaded'</span><span class="s8">,</span><span class="s1"> </span><span class="s12">function</span><span class="s8">()</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">const</span><span class="s1"> mobileMenuButton </span><span class="s8">=</span><span class="s1"> document</span><span class="s8">.</span><span class="s1">getElementById</span><span class="s8">(</span><span class="s9">'mobile-menu-button'</span><span class="s8">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">const</span><span class="s1"> mobileMenu </span><span class="s8">=</span><span class="s1"> document</span><span class="s8">.</span><span class="s1">getElementById</span><span class="s8">(</span><span class="s9">'mobile-menu'</span><span class="s8">);</span></p>
-<p class="p7"><span class="s11"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>mobileMenuButton</span><span class="s8">.</span><span class="s1">addEventListener</span><span class="s8">(</span><span class="s9">'click'</span><span class="s8">,</span><span class="s1"> </span><span class="s12">function</span><span class="s8">()</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>mobileMenu</span><span class="s8">.</span><span class="s1">classList</span><span class="s8">.</span><span class="s1">toggle</span><span class="s8">(</span><span class="s9">'hidden'</span><span class="s8">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s8">});</span></p>
-<p class="p7"><span class="s11"></span><br></p>
-<p class="p5"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">// Tab functionality</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">const</span><span class="s1"> tabButtons </span><span class="s8">=</span><span class="s1"> document</span><span class="s8">.</span><span class="s1">querySelectorAll</span><span class="s8">(</span><span class="s9">'.tab-btn'</span><span class="s8">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">const</span><span class="s1"> tabPanes </span><span class="s8">=</span><span class="s1"> document</span><span class="s8">.</span><span class="s1">querySelectorAll</span><span class="s8">(</span><span class="s9">'.tab-pane'</span><span class="s8">);</span></p>
-<p class="p7"><span class="s11"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>tabButtons</span><span class="s8">.</span><span class="s1">forEach</span><span class="s8">(</span><span class="s1">button </span><span class="s8">=&gt;</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>button</span><span class="s8">.</span><span class="s1">addEventListener</span><span class="s8">(</span><span class="s9">'click'</span><span class="s8">,</span><span class="s1"> </span><span class="s12">function</span><span class="s8">()</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>tabButtons</span><span class="s8">.</span><span class="s1">forEach</span><span class="s8">(</span><span class="s1">btn </span><span class="s8">=&gt;</span><span class="s1"> btn</span><span class="s8">.</span><span class="s1">classList</span><span class="s8">.</span><span class="s1">remove</span><span class="s8">(</span><span class="s9">'active'</span><span class="s8">));</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s12">this</span><span class="s8">.</span><span class="s1">classList</span><span class="s8">.</span><span class="s1">add</span><span class="s8">(</span><span class="s9">'active'</span><span class="s8">);</span></p>
-<p class="p7"><span class="s11"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s12">const</span><span class="s1"> tabId </span><span class="s8">=</span><span class="s1"> </span><span class="s12">this</span><span class="s8">.</span><span class="s1">dataset</span><span class="s8">.</span><span class="s1">tab</span><span class="s8">;</span></p>
-<p class="p7"><span class="s11"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>tabPanes</span><span class="s8">.</span><span class="s1">forEach</span><span class="s8">(</span><span class="s1">pane </span><span class="s8">=&gt;</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s12">if</span><span class="s1"> </span><span class="s8">(</span><span class="s1">pane</span><span class="s8">.</span><span class="s1">id </span><span class="s8">===</span><span class="s1"> tabId</span><span class="s8">)</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>pane</span><span class="s8">.</span><span class="s1">classList</span><span class="s8">.</span><span class="s1">remove</span><span class="s8">(</span><span class="s9">'hidden'</span><span class="s8">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>pane</span><span class="s8">.</span><span class="s1">classList</span><span class="s8">.</span><span class="s1">add</span><span class="s8">(</span><span class="s9">'active'</span><span class="s8">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s8">}</span><span class="s1"> </span><span class="s12">else</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>pane</span><span class="s8">.</span><span class="s1">classList</span><span class="s8">.</span><span class="s1">add</span><span class="s8">(</span><span class="s9">'hidden'</span><span class="s8">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>pane</span><span class="s8">.</span><span class="s1">classList</span><span class="s8">.</span><span class="s1">remove</span><span class="s8">(</span><span class="s9">'active'</span><span class="s8">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s8">});</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s8">});</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s8">});</span></p>
-<p class="p7"><span class="s11"></span><br></p>
-<p class="p5"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">// Smooth scrolling and active nav link highlighting</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">const</span><span class="s1"> navLinks </span><span class="s8">=</span><span class="s1"> document</span><span class="s8">.</span><span class="s1">querySelectorAll</span><span class="s8">(</span><span class="s9">'a[href^="#"]'</span><span class="s8">);</span></p>
-<p class="p7"><span class="s11"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">function</span><span class="s1"> onScroll</span><span class="s8">()</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s12">let</span><span class="s1"> currentSection </span><span class="s8">=</span><span class="s1"> </span><span class="s9">""</span><span class="s8">;</span></p>
-<p class="p7"><span class="s11"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>navLinks</span><span class="s8">.</span><span class="s1">forEach</span><span class="s8">(</span><span class="s1">link </span><span class="s8">=&gt;</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s12">const</span><span class="s1"> section </span><span class="s8">=</span><span class="s1"> document</span><span class="s8">.</span><span class="s1">querySelector</span><span class="s8">(</span><span class="s1">link</span><span class="s8">.</span><span class="s1">getAttribute</span><span class="s8">(</span><span class="s9">'href'</span><span class="s8">));</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s12">if</span><span class="s1"> </span><span class="s8">(</span><span class="s1">section</span><span class="s8">)</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                       </span></span><span class="s12">const</span><span class="s1"> sectionTop </span><span class="s8">=</span><span class="s1"> section</span><span class="s8">.</span><span class="s1">offsetTop </span><span class="s8">-</span><span class="s1"> </span><span class="s13">100</span><span class="s8">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                       </span></span><span class="s12">if</span><span class="s1"> </span><span class="s8">(</span><span class="s1">window</span><span class="s8">.</span><span class="s1">scrollY </span><span class="s8">&gt;=</span><span class="s1"> sectionTop</span><span class="s8">)</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                           </span>currentSection </span><span class="s8">=</span><span class="s1"> section</span><span class="s8">.</span><span class="s1">getAttribute</span><span class="s8">(</span><span class="s9">'id'</span><span class="s8">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                       </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s8">});</span></p>
-<p class="p7"><span class="s11"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>document</span><span class="s8">.</span><span class="s1">querySelectorAll</span><span class="s8">(</span><span class="s9">'.nav-link'</span><span class="s8">).</span><span class="s1">forEach</span><span class="s8">(</span><span class="s1">link </span><span class="s8">=&gt;</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>link</span><span class="s8">.</span><span class="s1">classList</span><span class="s8">.</span><span class="s1">remove</span><span class="s8">(</span><span class="s9">'active'</span><span class="s8">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s12">if</span><span class="s1"> </span><span class="s8">(</span><span class="s1">link</span><span class="s8">.</span><span class="s1">getAttribute</span><span class="s8">(</span><span class="s9">'href'</span><span class="s8">).</span><span class="s1">substring</span><span class="s8">(</span><span class="s13">1</span><span class="s8">)</span><span class="s1"> </span><span class="s8">===</span><span class="s1"> currentSection</span><span class="s8">)</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>link</span><span class="s8">.</span><span class="s1">classList</span><span class="s8">.</span><span class="s1">add</span><span class="s8">(</span><span class="s9">'active'</span><span class="s8">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s8">});</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s8">}</span></p>
-<p class="p7"><span class="s11"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>window</span><span class="s8">.</span><span class="s1">addEventListener</span><span class="s8">(</span><span class="s9">'scroll'</span><span class="s8">,</span><span class="s1"> onScroll</span><span class="s8">);</span></p>
-<p class="p7"><span class="s11"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>navLinks</span><span class="s8">.</span><span class="s1">forEach</span><span class="s8">(</span><span class="s1">anchor </span><span class="s8">=&gt;</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>anchor</span><span class="s8">.</span><span class="s1">addEventListener</span><span class="s8">(</span><span class="s9">'click'</span><span class="s8">,</span><span class="s1"> </span><span class="s12">function</span><span class="s1"> </span><span class="s8">(</span><span class="s1">e</span><span class="s8">)</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>e</span><span class="s8">.</span><span class="s1">preventDefault</span><span class="s8">();</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>document</span><span class="s8">.</span><span class="s1">querySelector</span><span class="s8">(</span><span class="s12">this</span><span class="s8">.</span><span class="s1">getAttribute</span><span class="s8">(</span><span class="s9">'href'</span><span class="s8">)).</span><span class="s1">scrollIntoView</span><span class="s8">({</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>behavior</span><span class="s8">:</span><span class="s1"> </span><span class="s9">'smooth'</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s8">});</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                     </span></span><span class="s12">if</span><span class="s1"> </span><span class="s8">(</span><span class="s1">mobileMenu</span><span class="s8">.</span><span class="s1">classList</span><span class="s8">.</span><span class="s1">contains</span><span class="s8">(</span><span class="s9">'hidden'</span><span class="s8">)</span><span class="s1"> </span><span class="s8">===</span><span class="s1"> </span><span class="s12">false</span><span class="s8">)</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>mobileMenu</span><span class="s8">.</span><span class="s1">classList</span><span class="s8">.</span><span class="s1">add</span><span class="s8">(</span><span class="s9">'hidden'</span><span class="s8">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s8">});</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s8">});</span></p>
-<p class="p7"><span class="s11"></span><br></p>
-<p class="p5"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">// Chart.js implementation</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">const</span><span class="s1"> chartCtx </span><span class="s8">=</span><span class="s1"> document</span><span class="s8">.</span><span class="s1">getElementById</span><span class="s8">(</span><span class="s9">'devImpactChart'</span><span class="s8">).</span><span class="s1">getContext</span><span class="s8">(</span><span class="s9">'2d'</span><span class="s8">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">const</span><span class="s1"> devImpactChart </span><span class="s8">=</span><span class="s1"> </span><span class="s12">new</span><span class="s1"> </span><span class="s14">Chart</span><span class="s8">(</span><span class="s1">chartCtx</span><span class="s8">,</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>type</span><span class="s8">:</span><span class="s1"> </span><span class="s9">'bar'</span><span class="s8">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>data</span><span class="s8">:</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">                    </span>labels</span><span class="s8">:</span><span class="s4"> </span><span class="s8">[</span><span class="s1">'Development Speed'</span><span class="s8">,</span><span class="s4"> </span><span class="s1">'Innovation Rate'</span><span class="s8">,</span><span class="s4"> </span><span class="s1">'Code Quality'</span><span class="s8">,</span><span class="s4"> </span><span class="s1">'Team Scalability'</span><span class="s8">],</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>datasets</span><span class="s8">:</span><span class="s1"> </span><span class="s8">[{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>label</span><span class="s8">:</span><span class="s1"> </span><span class="s9">'Impact Score (Traditional)'</span><span class="s8">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>data</span><span class="s8">:</span><span class="s1"> </span><span class="s8">[</span><span class="s13">60</span><span class="s8">,</span><span class="s1"> </span><span class="s13">50</span><span class="s8">,</span><span class="s1"> </span><span class="s13">70</span><span class="s8">,</span><span class="s1"> </span><span class="s13">55</span><span class="s8">],</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>backgroundColor</span><span class="s8">:</span><span class="s1"> </span><span class="s9">'#D1D5DB'</span><span class="s8">,</span><span class="s1"> </span><span class="s7">// Gray-300</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>borderRadius</span><span class="s8">:</span><span class="s1"> </span><span class="s13">8</span><span class="s8">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s8">},</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>label</span><span class="s8">:</span><span class="s1"> </span><span class="s9">'Impact Score (AI-Enhanced)'</span><span class="s8">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>data</span><span class="s8">:</span><span class="s1"> </span><span class="s8">[</span><span class="s13">90</span><span class="s8">,</span><span class="s1"> </span><span class="s13">85</span><span class="s8">,</span><span class="s1"> </span><span class="s13">88</span><span class="s8">,</span><span class="s1"> </span><span class="s13">80</span><span class="s8">],</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>backgroundColor</span><span class="s8">:</span><span class="s1"> </span><span class="s9">'#3B82F6'</span><span class="s8">,</span><span class="s1"> </span><span class="s7">// Tech Blue</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>borderRadius</span><span class="s8">:</span><span class="s1"> </span><span class="s13">8</span><span class="s8">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s8">}]</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s8">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>options</span><span class="s8">:</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>responsive</span><span class="s8">:</span><span class="s1"> </span><span class="s12">true</span><span class="s8">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>maintainAspectRatio</span><span class="s8">:</span><span class="s1"> </span><span class="s12">false</span><span class="s8">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>scales</span><span class="s8">:</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>y</span><span class="s8">:</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>beginAtZero</span><span class="s8">:</span><span class="s1"> </span><span class="s12">true</span><span class="s8">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>grid</span><span class="s8">:</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>color</span><span class="s8">:</span><span class="s1"> </span><span class="s9">'#EAE8E2'</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s8">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>ticks</span><span class="s8">:</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>color</span><span class="s8">:</span><span class="s1"> </span><span class="s9">'#706f6c'</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s8">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>x</span><span class="s8">:</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                             </span>grid</span><span class="s8">:</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>display</span><span class="s8">:</span><span class="s1"> </span><span class="s12">false</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s8">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>ticks</span><span class="s8">:</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>color</span><span class="s8">:</span><span class="s1"> </span><span class="s9">'#706f6c'</span><span class="s8">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>font</span><span class="s8">:</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span>weight</span><span class="s8">:</span><span class="s1"> </span><span class="s9">'600'</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s8">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>maxRotation</span><span class="s8">:</span><span class="s1"> </span><span class="s13">0</span><span class="s8">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>minRotation</span><span class="s8">:</span><span class="s1"> </span><span class="s13">0</span><span class="s8">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>autoSkip</span><span class="s8">:</span><span class="s1"> </span><span class="s12">false</span><span class="s8">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>callback</span><span class="s8">:</span><span class="s1"> </span><span class="s12">function</span><span class="s8">(</span><span class="s1">value</span><span class="s8">,</span><span class="s1"> index</span><span class="s8">,</span><span class="s1"> values</span><span class="s8">)</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span></span><span class="s12">const</span><span class="s1"> label </span><span class="s8">=</span><span class="s1"> </span><span class="s12">this</span><span class="s8">.</span><span class="s1">getLabelForValue</span><span class="s8">(</span><span class="s1">value</span><span class="s8">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span></span><span class="s12">if</span><span class="s1"> </span><span class="s8">(</span><span class="s1">label</span><span class="s8">.</span><span class="s1">length </span><span class="s8">&gt;</span><span class="s1"> </span><span class="s13">15</span><span class="s8">)</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                        </span></span><span class="s12">return</span><span class="s1"> label</span><span class="s8">.</span><span class="s1">split</span><span class="s8">(</span><span class="s9">' '</span><span class="s8">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span></span><span class="s12">return</span><span class="s1"> label</span><span class="s8">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s8">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>plugins</span><span class="s8">:</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>legend</span><span class="s8">:</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>position</span><span class="s8">:</span><span class="s1"> </span><span class="s9">'top'</span><span class="s8">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>labels</span><span class="s8">:</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>color</span><span class="s8">:</span><span class="s1"> </span><span class="s9">'#4A4A4A'</span><span class="s8">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>font</span><span class="s8">:</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span>weight</span><span class="s8">:</span><span class="s1"> </span><span class="s9">'bold'</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s8">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>tooltip</span><span class="s8">:</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>enabled</span><span class="s8">:</span><span class="s1"> </span><span class="s12">true</span><span class="s8">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                             </span>backgroundColor</span><span class="s8">:</span><span class="s1"> </span><span class="s9">'#2c3e50'</span><span class="s8">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                             </span>titleFont</span><span class="s8">:</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>weight</span><span class="s8">:</span><span class="s1"> </span><span class="s9">'bold'</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                             </span></span><span class="s8">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                             </span>bodyFont</span><span class="s8">:</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>size</span><span class="s8">:</span><span class="s1"> </span><span class="s13">14</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                             </span></span><span class="s8">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                             </span>callbacks</span><span class="s8">:</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>label</span><span class="s8">:</span><span class="s1"> </span><span class="s12">function</span><span class="s8">(</span><span class="s1">context</span><span class="s8">)</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span></span><span class="s12">let</span><span class="s1"> label </span><span class="s8">=</span><span class="s1"> context</span><span class="s8">.</span><span class="s1">dataset</span><span class="s8">.</span><span class="s1">label </span><span class="s8">||</span><span class="s1"> </span><span class="s9">''</span><span class="s8">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span></span><span class="s12">if</span><span class="s1"> </span><span class="s8">(</span><span class="s1">label</span><span class="s8">)</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                        </span>label </span><span class="s8">+=</span><span class="s1"> </span><span class="s9">': '</span><span class="s8">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span></span><span class="s12">if</span><span class="s1"> </span><span class="s8">(</span><span class="s1">context</span><span class="s8">.</span><span class="s1">parsed</span><span class="s8">.</span><span class="s1">y </span><span class="s8">!==</span><span class="s1"> </span><span class="s12">null</span><span class="s8">)</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                        </span>label </span><span class="s8">+=</span><span class="s1"> context</span><span class="s8">.</span><span class="s1">parsed</span><span class="s8">.</span><span class="s1">y </span><span class="s8">+</span><span class="s1"> </span><span class="s9">'% Impact'</span><span class="s8">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span></span><span class="s12">return</span><span class="s1"> label</span><span class="s8">;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                             </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s8">},</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>animation</span><span class="s8">:</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>duration</span><span class="s8">:</span><span class="s1"> </span><span class="s13">1500</span><span class="s8">,</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>easing</span><span class="s8">:</span><span class="s1"> </span><span class="s9">'easeInOutQuart'</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s8">});</span></p>
-<p class="p7"><span class="s11"></span><br></p>
-<p class="p5"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">// Intersection Observer for animations</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">const</span><span class="s1"> sections </span><span class="s8">=</span><span class="s1"> document</span><span class="s8">.</span><span class="s1">querySelectorAll</span><span class="s8">(</span><span class="s9">'.section-fade-in'</span><span class="s8">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s12">const</span><span class="s1"> observer </span><span class="s8">=</span><span class="s1"> </span><span class="s12">new</span><span class="s1"> </span><span class="s14">IntersectionObserver</span><span class="s8">((</span><span class="s1">entries</span><span class="s8">)</span><span class="s1"> </span><span class="s8">=&gt;</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>entries</span><span class="s8">.</span><span class="s1">forEach</span><span class="s8">(</span><span class="s1">entry </span><span class="s8">=&gt;</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s12">if</span><span class="s1"> </span><span class="s8">(</span><span class="s1">entry</span><span class="s8">.</span><span class="s1">isIntersecting</span><span class="s8">)</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>entry</span><span class="s8">.</span><span class="s1">target</span><span class="s8">.</span><span class="s1">classList</span><span class="s8">.</span><span class="s1">add</span><span class="s8">(</span><span class="s9">'visible'</span><span class="s8">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s8">}</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s8">});</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s8">},</span><span class="s1"> </span><span class="s8">{</span><span class="s1"> threshold</span><span class="s8">:</span><span class="s1"> </span><span class="s13">0.1</span><span class="s1"> </span><span class="s8">});</span></p>
-<p class="p7"><span class="s11"></span><br></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>sections</span><span class="s8">.</span><span class="s1">forEach</span><span class="s8">(</span><span class="s1">section </span><span class="s8">=&gt;</span><span class="s1"> </span><span class="s8">{</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>observer</span><span class="s8">.</span><span class="s1">observe</span><span class="s8">(</span><span class="s1">section</span><span class="s8">);</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s8">});</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s8">});</span></p>
-<p class="p1"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s3">&lt;/</span><span class="s1">body</span><span class="s3">&gt;</span></p>
-<p class="p1"><span class="s3">&lt;/</span><span class="s1">html</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s11"></span><br></p>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header id="header" class="bg-warm-neutral/80 backdrop-blur-sm sticky top-0 z-50 transition-all duration-300 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-2xl font-extrabold text-tech-primary">🔧</span>
+                <h1 class="text-xl font-bold ml-2 text-warm-dark">AI-Enhanced Engineer</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#why-matters" class="nav-link text-warm-medium font-semibold pb-1">Why It Matters</a>
+                <a href="#what-we-do" class="nav-link text-warm-medium font-semibold pb-1">What We Do</a>
+                <a href="#human-advantage" class="nav-link text-warm-medium font-semibold pb-1">Human Advantage</a>
+                <a href="#value" class="nav-link text-warm-medium font-semibold pb-1">Value</a>
+                <a href="#commitment" class="nav-link text-warm-medium font-semibold pb-1">Commitment</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-warm-dark">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#why-matters" class="block text-center py-2 px-4 text-sm text-warm-dark hover:bg-warm-secondary">Why It Matters</a>
+            <a href="#what-we-do" class="block text-center py-2 px-4 text-sm text-warm-dark hover:bg-warm-secondary">What We Do</a>
+            <a href="#human-advantage" class="block text-center py-2 px-4 text-sm text-warm-dark hover:bg-warm-secondary">Human Advantage</a>
+            <a href="#value" class="block text-center py-2 px-4 text-sm text-warm-dark hover:bg-warm-secondary">Value</a>
+            <a href="#commitment" class="block text-center py-2 px-4 text-sm text-warm-dark hover:bg-warm-secondary">Commitment</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="py-20 md:py-32">
+            <div class="container mx-auto text-center px-6">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-warm-dark leading-tight">
+                    AI-Enhanced Software Engineers
+                </h1>
+                <p class="mt-4 text-lg md:text-xl text-warm-medium max-w-3xl mx-auto">
+                    Designing smarter systems by combining the power of artificial intelligence with the irreplaceable value of human creativity and strategic insight.
+                </p>
+                <a href="#why-matters" class="mt-8 inline-block bg-tech-primary text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-300">Discover Our Impact</a>
+            </div>
+        </section>
+
+        <!-- Why This Role Matters Section -->
+        <section id="why-matters" class="py-20 bg-warm-secondary section-fade-in">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-warm-dark">🌍 AI is Reshaping Software Development.</h2>
+                <p class="text-center text-lg text-warm-medium mt-4 max-w-2xl mx-auto">We aren't just adapting to this change; we are leading it. This role is crucial for any organization looking to thrive in the modern tech landscape.</p>
+                <div class="mt-12 grid md:grid-cols-3 gap-8">
+                    <div class="card bg-white p-8 rounded-xl shadow-md text-center">
+                        <div class="text-4xl mb-4">⚡</div>
+                        <h3 class="text-xl font-bold text-warm-dark mb-2">Pace of Technology</h3>
+                        <p class="text-warm-medium">Tech is moving faster than ever. AI isn't just an add-on; it's deeply embedded in how we build, test, and deploy modern software solutions.</p>
+                    </div>
+                    <div class="card bg-white p-8 rounded-xl shadow-md text-center">
+                        <div class="text-4xl mb-4">🧠</div>
+                        <h3 class="text-xl font-bold text-warm-dark mb-2">The Innovation Imperative</h3>
+                        <p class="text-warm-medium">Companies need engineers who don't just write code, but who can adapt, innovate, and leverage the most advanced tools to solve complex problems.</p>
+                    </div>
+                    <div class="card bg-white p-8 rounded-xl shadow-md text-center">
+                        <div class="text-4xl mb-4">🤝</div>
+                        <h3 class="text-xl font-bold text-warm-dark mb-2">Strategic Partnership</h3>
+                        <p class="text-warm-medium">This role represents the future of engineering—a strategic blend of AI-native tools and sophisticated, human-led strategic thinking.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What We Do Differently Section -->
+        <section id="what-we-do" class="py-20 section-fade-in">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-warm-dark">🛠️ Not Just Coding—Co-creating with AI</h2>
+                <p class="text-center text-lg text-warm-medium mt-4 max-w-3xl mx-auto">Our workflow integrates intelligent tools at every stage of the development lifecycle. This allows us to build better software, faster, and with a focus on what truly matters: innovation and quality.</p>
+                <div class="mt-12 max-w-4xl mx-auto">
+                    <div class="flex justify-center mb-8 bg-warm-secondary rounded-lg p-1 space-x-1">
+                        <button class="tab-btn flex-1 py-2 px-4 rounded-md font-semibold active" data-tab="coding">Code Generation</button>
+                        <button class="tab-btn flex-1 py-2 px-4 rounded-md font-semibold" data-tab="testing">Testing & QA</button>
+                        <button class="tab-btn flex-1 py-2 px-4 rounded-md font-semibold" data-tab="features">Smart Features</button>
+                    </div>
+                    <div id="tab-content" class="bg-white p-8 rounded-xl shadow-lg">
+                        <div class="tab-pane active" id="coding">
+                            <h3 class="text-2xl font-bold text-tech-primary mb-3">AI-Accelerated Coding</h3>
+                            <p class="text-warm-medium">We leverage state-of-the-art tools like <strong class="text-warm-dark">GitHub Copilot</strong> and <strong class="text-warm-dark">ChatGPT-4o</strong> to generate boilerplate code, suggest complex algorithms, and refactor existing code for clarity and performance. This isn't just about auto-complete; it's about having an intelligent partner that understands context, allowing us to focus on high-level architecture and logic.</p>
+                        </div>
+                        <div class="tab-pane hidden" id="testing">
+                            <h3 class="text-2xl font-bold text-tech-primary mb-3">Automated Testing & Diagnostics</h3>
+                            <p class="text-warm-medium">We use AI to automate the creation of unit tests, integration tests, and even to identify potential bugs before they enter production. With AI-powered diagnostics, we can analyze code quality, find performance bottlenecks, and ensure our CI/CD pipelines are robust and reliable, significantly reducing technical debt accumulation.</p>
+                        </div>
+                        <div class="tab-pane hidden" id="features">
+                            <h3 class="text-2xl font-bold text-tech-primary mb-3">Building with Intelligence</h3>
+                            <p class="text-warm-medium">Our approach goes beyond just building applications. We integrate intelligent features directly into our products using the latest Large Language Models (LLMs) and API integrations. This means creating smarter software that can understand natural language, personalize user experiences, and provide predictive insights, adding a layer of value that standard applications lack.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Human Advantage Section -->
+        <section id="human-advantage" class="py-20 bg-warm-secondary section-fade-in">
+            <div class="container mx-auto px-6">
+                 <h2 class="text-3xl md:text-4xl font-bold text-center text-warm-dark">💡 We Bring What AI Can’t: Human Insight</h2>
+                 <p class="text-center text-lg text-warm-medium mt-4 max-w-3xl mx-auto">AI is a powerful tool, but our value lies in the skills that no algorithm can replicate. We guide, strategize, and ensure technology serves human goals.</p>
+                <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="card bg-white p-6 rounded-xl shadow">
+                        <h3 class="font-bold text-lg text-tech-primary mb-2">Ethical Thinking</h3>
+                        <p class="text-warm-medium text-sm">Ensuring fairness, transparency, and responsibility in every AI system we build, mitigating bias and prioritizing user trust.</p>
+                    </div>
+                    <div class="card bg-white p-6 rounded-xl shadow">
+                        <h3 class="font-bold text-lg text-tech-primary mb-2">Collaboration</h3>
+                        <p class="text-warm-medium text-sm">Working with cross-functional teams to translate complex business needs into elegant technical solutions that people love to use.</p>
+                    </div>
+                     <div class="card bg-white p-6 rounded-xl shadow">
+                        <h3 class="font-bold text-lg text-tech-primary mb-2">Creative Problem-Solving</h3>
+                        <p class="text-warm-medium text-sm">Tackling ambiguous problems and debugging complex issues where context, intuition, and innovative thinking are paramount.</p>
+                    </div>
+                    <div class="card bg-white p-6 rounded-xl shadow">
+                        <h3 class="font-bold text-lg text-tech-primary mb-2">Adaptability</h3>
+                        <p class="text-warm-medium text-sm">Committing to continuous learning in a rapidly changing field, mastering new tools and paradigms to always stay at the forefront of technology.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Value Proposition Section -->
+        <section id="value" class="py-20 section-fade-in">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-warm-dark">🚀 Faster. Smarter. Stronger Tech Teams.</h2>
+                <p class="text-center text-lg text-warm-medium mt-4 max-w-3xl mx-auto">Our AI-augmented approach isn't just a new process; it delivers measurable results that directly impact the bottom line and the pace of innovation.</p>
+                <div class="mt-16 grid lg:grid-cols-5 gap-8 items-center">
+                    <div class="lg:col-span-2 space-y-6">
+                        <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-tech-primary">
+                            <p class="text-4xl font-extrabold text-tech-primary">30-50%</p>
+                            <p class="font-semibold text-warm-dark">Faster Development Cycles</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-yellow-400">
+                             <p class="text-4xl font-extrabold text-yellow-500">2x</p>
+                            <p class="font-semibold text-warm-dark">More Innovative Features</p>
+                        </div>
+                         <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-green-400">
+                             <p class="text-4xl font-extrabold text-green-500">↑</p>
+                            <p class="font-semibold text-warm-dark">Higher Code Quality</p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-3">
+                        <div class="chart-container">
+                            <canvas id="devImpactChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Commitment Section -->
+        <section id="commitment" class="py-20 bg-warm-secondary section-fade-in">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-warm-dark">🔮 We Don't Just Use AI. We Evolve With It.</h2>
+                <div class="mt-8 max-w-3xl mx-auto">
+                    <blockquote class="text-xl md:text-2xl font-semibold italic text-warm-medium border-l-4 border-tech-primary pl-6">
+                        “By integrating AI into our workflows with strategy and care, we’re not just staying relevant—we’re shaping what’s next.”
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-warm-dark text-warm-secondary">
+        <div class="container mx-auto py-8 px-6 text-center">
+            <h3 class="text-2xl font-bold">👏 Let's Build The Future—Together.</h3>
+            <p class="mt-4 text-sm">[Your Team Name] | [Optional contact or portfolio links]</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Tab functionality
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const tabId = this.dataset.tab;
+
+                    tabPanes.forEach(pane => {
+                        if (pane.id === tabId) {
+                            pane.classList.remove('hidden');
+                            pane.classList.add('active');
+                        } else {
+                            pane.classList.add('hidden');
+                            pane.classList.remove('active');
+                        }
+                    });
+                });
+            });
+
+            // Smooth scrolling and active nav link highlighting
+            const navLinks = document.querySelectorAll('a[href^="#"]');
+
+            function onScroll() {
+                let currentSection = "";
+
+                navLinks.forEach(link => {
+                    const section = document.querySelector(link.getAttribute('href'));
+                    if (section) {
+                       const sectionTop = section.offsetTop - 100;
+                       if (window.scrollY >= sectionTop) {
+                           currentSection = section.getAttribute('id');
+                       }
+                    }
+                });
+
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === currentSection) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', onScroll);
+
+            navLinks.forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                     if (mobileMenu.classList.contains('hidden') === false) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+
+            // Chart.js implementation
+            const chartCtx = document.getElementById('devImpactChart').getContext('2d');
+            const devImpactChart = new Chart(chartCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Development Speed', 'Innovation Rate', 'Code Quality', 'Team Scalability'],
+                    datasets: [{
+                        label: 'Impact Score (Traditional)',
+                        data: [60, 50, 70, 55],
+                        backgroundColor: '#D1D5DB', // Gray-300
+                        borderRadius: 8,
+                    }, {
+                        label: 'Impact Score (AI-Enhanced)',
+                        data: [90, 85, 88, 80],
+                        backgroundColor: '#3B82F6', // Tech Blue
+                        borderRadius: 8,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: '#EAE8E2'
+                            },
+                            ticks: {
+                                color: '#706f6c'
+                            }
+                        },
+                        x: {
+                             grid: {
+                                display: false
+                            },
+                            ticks: {
+                                color: '#706f6c',
+                                font: {
+                                    weight: '600'
+                                },
+                                maxRotation: 0,
+                                minRotation: 0,
+                                autoSkip: false,
+                                callback: function(value, index, values) {
+                                    const label = this.getLabelForValue(value);
+                                    if (label.length > 15) {
+                                        return label.split(' ');
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                color: '#4A4A4A',
+                                font: {
+                                    weight: 'bold'
+                                }
+                            }
+                        },
+                        tooltip: {
+                            enabled: true,
+                             backgroundColor: '#2c3e50',
+                             titleFont: {
+                                weight: 'bold'
+                             },
+                             bodyFont: {
+                                size: 14
+                             },
+                             callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.y !== null) {
+                                        label += context.parsed.y + '% Impact';
+                                    }
+                                    return label;
+                                }
+                             }
+                        }
+                    },
+                    animation: {
+                        duration: 1500,
+                        easing: 'easeInOutQuart'
+                    }
+                }
+            });
+
+            // Intersection Observer for animations
+            const sections = document.querySelectorAll('.section-fade-in');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
